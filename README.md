@@ -295,6 +295,13 @@ Time: 2.456s
    npm test -- --clearCache
    ```
 
+   4. **Working Screeenshots**:
+<img width="447" height="677" alt="image" src="https://github.com/user-attachments/assets/de12cda3-ced4-4b74-b63e-d853be2e120d" />
+
+### Test cases:
+<img width="1155" height="522" alt="image" src="https://github.com/user-attachments/assets/398e8e19-583c-42eb-999e-a9e4ff23d4c0" />
+
+
 ## Support
 
 For support or questions, please open an issue in the repository or contact the development team.
