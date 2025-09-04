@@ -60,19 +60,19 @@ describe('TransactionTable', () => {
   test('shows loading state', () => {
     render(<TransactionTable transactions={[]} loading={true} />);
 
-    expect(screen.getByText('Loading transactions...')).toBeInTheDocument();
+    expect(screen.getByText('🔄 Loading transactions...')).toBeInTheDocument();
   });
 
   test('shows no transactions message when empty', () => {
     render(<TransactionTable transactions={[]} />);
 
-    expect(screen.getByText('No transactions found for the selected period')).toBeInTheDocument();
+    expect(screen.getByText('📊 No transactions found for the selected period')).toBeInTheDocument();
   });
 
   test('handles null transactions', () => {
     render(<TransactionTable transactions={null} />);
 
-    expect(screen.getByText('No transactions found for the selected period')).toBeInTheDocument();
+    expect(screen.getByText('📊 No transactions found for the selected period')).toBeInTheDocument();
   });
 
   test('shows pagination when more than 10 transactions', () => {

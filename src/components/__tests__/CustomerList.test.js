@@ -25,7 +25,7 @@ describe('CustomerList', () => {
     );
 
     expect(screen.getByTestId('customer-select')).toBeInTheDocument();
-    expect(screen.getByText('Select a customer')).toBeInTheDocument();
+    expect(screen.getByText('👤 Select a customer')).toBeInTheDocument();
     expect(screen.getByText('John Smith (CUST001)')).toBeInTheDocument();
     expect(screen.getByText('Sarah Johnson (CUST002)')).toBeInTheDocument();
     expect(screen.getByText('Mike Davis (CUST003)')).toBeInTheDocument();
@@ -69,8 +69,9 @@ describe('CustomerList', () => {
       />
     );
 
-    expect(screen.getByText('Loading customers...')).toBeInTheDocument();
-    expect(screen.getByTestId('customer-select')).toBeDisabled();
+    expect(screen.getByText('🔄 Loading customers...')).toBeInTheDocument();
+    const select = screen.getByRole('combobox');
+    expect(select).toBeDisabled();
   });
 
   test('handles empty customers array', () => {
@@ -82,7 +83,7 @@ describe('CustomerList', () => {
       />
     );
 
-    expect(screen.getByText('Select a customer')).toBeInTheDocument();
+    expect(screen.getByText('👤 Select a customer')).toBeInTheDocument();
     expect(screen.queryByText('John Smith (CUST001)')).not.toBeInTheDocument();
   });
 });
